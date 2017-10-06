@@ -157,4 +157,31 @@ func main() {
 
 	c4 := [...]int{4, 5, 6} // use `…` to replace the length parameter and Go will calculate it for you.
 	fmt.Printf("int %d %d\n", c4[1], c4[2])
+
+	var ar = [10]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'}
+	var ag, bg []byte
+	ag = ar[2:5]
+	bg = ar[3:5]
+	// cg = ar[3:30]
+	fmt.Printf("st %s\n", ag)
+	fmt.Printf("st %s\n", bg)
+
+	// map
+
+	// var numbers map[string]int
+	// another way to define map
+	numbers := make(map[string]int)
+	numbers["one"] = 1 // assign value by key
+	numbers["ten"] = 10
+	numbers["three"] = 3
+
+	fmt.Println("The third number is: ", numbers["three"]) // get values
+
+	mad := make(map[string]string)
+	mad["Hello"] = "Bonjour"
+	madad := mad
+	madad["Hello"] = "Salut"
+
+	fmt.Println("The third number is: ", mad["Hello"], "   ", madad["Hello"]) // get values
+
 }
