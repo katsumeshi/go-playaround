@@ -22,4 +22,18 @@ func main() {
 
 	// the following code will not compile
 	//fmt.Println(g)
+
+	// can use go to func!!
+	goToFunc()
+}
+
+func goToFunc() {
+	i := 0
+Here: // label ends with ":"
+	fmt.Println(i)
+	i++
+	if i == 10 {
+		return
+	}
+	goto Here // jump to label "Here"
 }
